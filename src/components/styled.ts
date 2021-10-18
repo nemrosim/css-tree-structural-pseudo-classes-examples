@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
     display: flex;
     height: 50px;
     align-items: center;
     justify-content: center;
 `;
 
-const Card = styled.div`
+Container.displayName = 'Container';
+
+export const Card = styled.div`
     background-color: #4fe0f0;
     font-family: sans-serif;
     font-size: 20px;
@@ -23,15 +25,14 @@ const Card = styled.div`
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
 `;
 
-const Layout = styled.div`
+Card.displayName = 'Card';
+
+export const Layout = styled.div`
     height: 100vh;
+    width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
 `;
 
-export const Styled = {
-    Container,
-    Card,
-    Layout,
-};
+Layout.displayName = 'Layout';
